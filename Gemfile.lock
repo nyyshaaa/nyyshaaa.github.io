@@ -311,6 +311,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll (~> 3.10)
   minimal-mistakes-jekyll
   rubyzip (~> 2.4.1)
 
