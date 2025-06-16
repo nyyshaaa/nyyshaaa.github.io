@@ -2,14 +2,14 @@
 main:
   - title: Heya
     url:   /
-  - title: Projects
-    url:   /projects/
+  # - title: Projects
+  #   url:   /projects/
   - title: Blogs
     url:   /blogs/
-  - title: SoloLeveling
-    url:   /sololeveling/
-  - title: Star dreams
-    url:   /star-dreams/
+  # - title: SoloLeveling
+  #   url:   /sololeveling/
+  # - title: Star dreams
+  #   url:   /star-dreams/
   # - title: SciCool
   #   url:   /science/
   # - title: Ideas
