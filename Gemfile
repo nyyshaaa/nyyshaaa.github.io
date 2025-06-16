@@ -2,7 +2,7 @@ source "https://rubygems.org"
 gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # gem "jekyll", "~> 3.10"
-gem "minimal-mistakes-jekyll", "~> 4.27.1"
+gem "minimal-mistakes-jekyll"
 
 
 # Explicitly pin rubyzip so it never jumps to a new version
