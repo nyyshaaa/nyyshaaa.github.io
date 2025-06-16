@@ -6,14 +6,13 @@ url: "https://nyyshaaa.github.io"
    
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
- 
-# Tell Minimal Mistakes to load our extra CSS
-defaults:
-  -
-    scope:
-      path: ""         # all files
-    values:
-      custom_css: "/assets/css/custom.css"
+
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+
+# Tell Jekyll to fetch Minimal Mistakes from GitHub:
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 
 # ── COLLECTIONS ────────────────────────────────────────────────
