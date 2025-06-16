@@ -4,25 +4,35 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  pages: write
+  id-token: write   # for deploy-pages@v4
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.x'
+
       - run: bundle config set --local path 'vendor/bundle'
       - run: bundle install --jobs 4 --retry 3
+
       - run: bundle exec jekyll build --config _config.yml --destination _site
-      - uses: actions/upload-pages-artifact@v1
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: _site/
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
