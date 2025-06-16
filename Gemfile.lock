@@ -310,9 +310,8 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  github-pages
-  jekyll (~> 3.10)
-  minimal-mistakes-jekyll
+  github-pages (~> 232)
+  minimal-mistakes-jekyll (~> 4.27.1)
   rubyzip (~> 2.4.1)
 
 BUNDLED WITH
