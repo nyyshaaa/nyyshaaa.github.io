@@ -1,6 +1,6 @@
 title: Slugger Space
 description: "A place to share my thoughts, poems, and projects."
-baseurl: "/nyyshaaa"        # the repo name, so links resolve
+baseurl: ""        # the repo name, so links resolve
 url: "https://nyyshaaa.github.io"
 
 
