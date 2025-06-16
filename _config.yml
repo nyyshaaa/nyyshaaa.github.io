@@ -4,14 +4,14 @@ baseurl: "/nyyshaaa.github.io"        # the repo name, so links resolve
 url: "https://nyyshaaa.github.io"
 
    
-# theme: minimal-mistakes-jekyll
+theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+#   - jekyll-remote-theme
 
-remote_theme: "mmistakes/minimal-mistakes@4.20.0"
+# remote_theme: "mmistakes/minimal-mistakes@4.20.0"
 
 
 
