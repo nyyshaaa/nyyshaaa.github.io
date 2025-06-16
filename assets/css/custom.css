@@ -1,0 +1,40 @@
+/* Set a pinkish dark background for the site */
+body {
+  background-color: #4a0033; /* Pinkish dark color */
+  color: #800080;           /* Purple text color */
+}
+
+/* Style navigation tabs */
+.visible-links a {
+  color: #800080; /* Purple text color for tabs */
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* Default underline */
+}
+
+.visible-links a:hover {
+  border-bottom: 2px solid #ffd700; /* Golden underline on hover */
+}
+
+/* Style headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffd700; /* Golden color for headers */
+}
+
+/* Style footer */
+.custom-footer {
+  background-color: #4a0033; /* Match the background color */
+  color: #ffd700;           /* Golden text color */
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-footer a {
+  color: #800080; /* Purple link color */
+  text-decoration: none;
+}
+
+.custom-footer a:hover {
+  color: #ffd700; /* Golden hover color */
+}
+
+
