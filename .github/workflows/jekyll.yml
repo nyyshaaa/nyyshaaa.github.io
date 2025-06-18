@@ -44,11 +44,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Dump compiled CSS (tail)
+      - name: Dump source SCSS
         run: |
-          echo ">>>> Last 20 lines of compiled main.scss <<<<"
-          tail -n 20 _site/assets/css/main.scss
- 
+          echo ">>>> Listing your assets/css folder <<<<"
+          ls -l assets/css
+          echo ">>>> Showing last 20 lines of main.scss <<<<"
+          tail -n 20 assets/css/main.scss
+
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -57,9 +59,14 @@ jobs:
 
       - name: Dump compiled CSS
         run: |
-          echo ">>>> First 20 lines of compiled main.css <<<<"
-          head -n 20 _site/assets/css/main.css
-          
+          echo ">>>> Last 20 lines of compiled main.css <<<<"
+          tail -n 20 _site/assets/css/main.css
+
+      - name: Search for override in CSS
+        run: |
+          grep -R "max-width: calc(100% + 30%)" _site/assets/css/main.css && echo "✅ Found override!" || echo "❌ Override missing"
+
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
