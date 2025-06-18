@@ -17,27 +17,27 @@ plugins:
 
 # ── COLLECTIONS ────────────────────────────────────────────────
 collections:
-  poems:
-    output: true
-    permalink: /poems/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-  projects:
+  # poems:
+  #   output: true
+  #   permalink: /poems/:path/
+  # projects:
+  #   output: true
+  #   permalink: /projects/:path/
+  blogs:
     output: true
     permalink: /blogs/:path/
-  projects:
-    output: true
-    permalink: /sololeveling/:path/
-  projects:
-    output: true
-    permalink: /science/:path/
-  projects:
-    output: true
-    permalink: /ideas/:path/
-  projects:
-    output: true
-    permalink: /star-dreams/:path/
+  # projects:
+  #   output: true
+  #   permalink: /sololeveling/:path/
+  # projects:
+  #   output: true
+  #   permalink: /science/:path/
+  # projects:
+  #   output: true
+  #   permalink: /ideas/:path/
+  # projects:
+  #   output: true
+  #   permalink: /star-dreams/:path/
   
 
 footer:
@@ -45,6 +45,6 @@ footer:
 
 # ── COLOR OVERRIDES ────────────────────────────────────────────
 
-header_background: "#336699"
-header_text:       "#ffffff"
-link_color:        "#f0c040"
+# header_background: "#336699"
+# header_text:       "#ffffff"
+# link_color:        "#f0c040"
