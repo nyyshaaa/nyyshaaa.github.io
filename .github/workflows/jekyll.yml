@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read      # needed to checkout your code
-  pages: write        # needed to push to Gh‑Pages
-  id-token: write     # needed by configure-pages
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
@@ -18,29 +18,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Ruby & Bundler cache
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2.0'    # or whatever exact version you pinned
-          bundler-cache: true      # runs `bundle install` and caches gems
+          ruby-version: '3.2.0'      # match your local Ruby
+          bundler-cache: true        # installs gems and caches them
 
-      - name: Configure GitHub Pages
+      - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build site with Jekyll
-        run: |
-          bundle exec jekyll build \
-            --config _config.yml \
-            --destination _site
+        run: bundle exec jekyll build --destination _site
         env:
           JEKYLL_ENV: production
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
 
@@ -51,6 +45,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - uses: actions/deploy-pages@v4
         id: deploy
-        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
