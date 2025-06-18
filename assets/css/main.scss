@@ -13,7 +13,7 @@
 .page__content {
   /* If the default max-width is 700px, this makes it 770px; 
      you can also use a percentage: */
-  max-width: calc(100% + 30%);
+  max-width: calc(100% + 30%) !important; // increase content width by 30%
 }
 
 // ── Enlarge images to fill more of the content area ────────────────

@@ -44,13 +44,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Dump source SCSS
+      - name: Dump compiled CSS (tail)
         run: |
-          echo ">>>> Listing your assets/css folder <<<<"
-          ls -l assets/css
-          echo ">>>> Showing first 20 lines of main.scss <<<<"
-          head -n 20 assets/css/main.scss
-          
+          echo ">>>> Last 20 lines of compiled main.css <<<<"
+          tail -n 20 _site/assets/css/main.css
+ 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
