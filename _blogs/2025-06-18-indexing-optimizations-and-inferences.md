@@ -2,7 +2,7 @@
 layout: single
 title: "Indexing optimizations and inferences"
 date: 2025-06-18 11:00
-permalink: /blogs/2025-06-18-indexing-optimizations-and-inferences/
+# permalink: /blogs/2025-06-18-indexing-optimizations-and-inferences/
 ---
 
 
