@@ -1,6 +1,6 @@
 # ── NAVIGATION (tabs) ─────────────────────────────────────────
 main:
-  - title: Heya
+  - title: Home
     url:   /
   # - title: Projects
   #   url:   /projects/
