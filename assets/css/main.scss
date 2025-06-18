@@ -1,0 +1,60 @@
+// ---
+// # Only the main Sass file needs front matter (the dashes are enough)
+// search: false
+// ---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+// // ── Increase overall content width by 10% ───────────────────────────
+.page__content {
+  /* If the default max-width is 700px, this makes it 770px; 
+     you can also use a percentage: */
+  max-width: calc(100% + 30%);
+}
+
+// ── Enlarge images to fill more of the content area ────────────────
+.page__content img {
+  display: block;
+  margin: 1.5rem auto;    // optional: center with some vertical space
+  max-width: 100%;        // let the image scale to its container
+  width: auto;            // preserve aspect ratio
+}
+
+// Optional: if you want images *wider* than the text block:
+// .page__content img.full-width {
+//   max-width: calc(100% + 10%);
+// }
+
+
+// .page {
+//   @include breakpoint($large) {
+//     float: inline-end;
+//     width: calc(100% - #{$right-sidebar-width-narrow} + 50%);
+//     padding-inline-end: $right-sidebar-width-narrow;
+//   }
+
+//   @include breakpoint($x-large) {
+//     width: calc(100% - #{$right-sidebar-width} + 50%);
+//     padding-inline-end: $right-sidebar-width;
+//   }
+// }
+
+// .page__content img {
+//   width: 200%;
+//   height: auto;
+//   max-width: 1200px;
+//   margin: 20px auto;
+//   display: block;
+// }
+
+// figure img {
+//   width: 200%;
+//   height: auto;
+//   max-width: 1200px;
+//   margin: 20px auto;
+//   display: block;
+// }

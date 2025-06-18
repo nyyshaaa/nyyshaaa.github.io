@@ -13,6 +13,9 @@ plugins:
 
 # remote_theme: "mmistakes/minimal-mistakes@4.20.0"
 
+include:
+  - assets/css/main.scss
+
 
 
 # ── COLLECTIONS ────────────────────────────────────────────────
@@ -43,8 +46,4 @@ collections:
 footer:
   links: false
 
-# ── COLOR OVERRIDES ────────────────────────────────────────────
 
-# header_background: "#336699"
-# header_text:       "#ffffff"
-# link_color:        "#f0c040"
