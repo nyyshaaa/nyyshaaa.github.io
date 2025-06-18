@@ -65,7 +65,7 @@ So index scan will do fine .
 SELECT short_code, visit_count 
 FROM url_shortener
 WHERE created_at >= '2024-11-21' 
-AND created_at <  '2024-11-25'```
+AND created_at <  '2024-11-25'
 
 
 ![image](https://github.com/user-attachments/assets/551454b3-114a-4d17-a319-d628b21d8121)
