@@ -13,6 +13,9 @@ plugins:
 
 # remote_theme: "mmistakes/minimal-mistakes@4.20.0"
 
+sass:
+  sass_dir: _sass
+
 include:
   - assets/css/main.scss
 
