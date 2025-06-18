@@ -60,12 +60,15 @@ Case of high selectivity(small fraction of total rows to be retrieved)
 So index scan will do fine .
 
 
-EXPLAIN 
+```EXPLAIN 
 (ANALYZE,BUFFERS,VERBOSE)
 SELECT short_code, visit_count 
 FROM url_shortener
 WHERE created_at >= '2024-11-21' 
-AND created_at <  '2024-11-25'
+AND created_at <  '2024-11-25'```
+
+![image](https://github.com/user-attachments/assets/551454b3-114a-4d17-a319-d628b21d8121)
+
 
 “2024–11–21” — (1_025_262 approx. 1/10 for whole table) contains around 50X more rows of any unique created_at
 
