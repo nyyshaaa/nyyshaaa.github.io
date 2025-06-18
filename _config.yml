@@ -5,7 +5,7 @@ url: "https://nyyshaaa.github.io"
 
    
 theme: "minimal-mistakes-jekyll"
-minimal_mistakes_skin: "sunrise1" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 plugins:
   - jekyll-feed
