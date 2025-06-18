@@ -46,8 +46,8 @@ jobs:
 
       - name: Dump compiled CSS (tail)
         run: |
-          echo ">>>> Last 20 lines of compiled main.css <<<<"
-          tail -n 20 _site/assets/css/main.css
+          echo ">>>> Last 20 lines of compiled main.scss <<<<"
+          tail -n 20 _site/assets/css/main.scss
  
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
