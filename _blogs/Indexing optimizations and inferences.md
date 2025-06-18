@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "Indexing optimizations and inferences"
 date: 2025-06-18 11:00
 ---
