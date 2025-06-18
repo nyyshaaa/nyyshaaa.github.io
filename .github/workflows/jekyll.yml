@@ -43,11 +43,25 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      - name: Dump source SCSS
+        run: |
+          echo ">>>> Listing your assets/css folder <<<<"
+          ls -l assets/css
+          echo ">>>> Showing first 20 lines of main.scss <<<<"
+          head -n 20 assets/css/main.scss
+          
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      - name: Dump compiled CSS
+        run: |
+          echo ">>>> First 20 lines of compiled main.css <<<<"
+          head -n 20 _site/assets/css/main.css
+          
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
